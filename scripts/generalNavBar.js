@@ -70,22 +70,20 @@ const generalNavBarMobile = () => {
 
     var div1 = document.createElement("div");
     div1.setAttribute("class", "generalNavBar__logo");
-    var img = document.createElement("img");
-    img.setAttribute("src", "../images/generalNavBar/logo.svg");
-    div1.appendChild(img);
-
     var p = document.createElement("p");
     var strong = document.createElement("strong");
     txt = document.createTextNode("درمانیتو");
     strong.appendChild(txt);
     p.appendChild(strong);
-    div1.appendChild(p);
-
-    p = document.createElement("p");
+    var br = document.createElement("br");
+    p.append(br);
     txt = document.createTextNode("همراه شما در درمان");
     p.appendChild(txt);
-
     div1.appendChild(p);
+
+    var img = document.createElement("img");
+    img.setAttribute("src", "../images/generalNavBar/logo.svg");
+    div1.appendChild(img);
 
     nav1.appendChild(div1);
 

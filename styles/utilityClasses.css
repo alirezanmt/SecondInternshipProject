@@ -7,6 +7,11 @@
      list-style: none;
  }
  
+ img {
+     max-width: 100;
+     height: auto;
+ }
+ 
  .buttonLarge {
      width: 170px;
      height: 52px;
