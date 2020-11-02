@@ -1,0 +1,36 @@
+ li>a {
+     text-decoration: none;
+     color: rgb(76, 76, 76);
+ }
+ 
+ li {
+     list-style: none;
+ }
+ 
+ .buttonLarge {
+     width: 170px;
+     height: 52px;
+     border-radius: 10px;
+     text-align: center;
+     font-size: 1.4rem;
+     font-weight: bold;
+     padding-top: 6px;
+ }
+ 
+ .button--light {
+     background-color: rgb(230, 243, 255);
+     color: rgb(24, 148, 255);
+     border: 1px solid rgb(230, 243, 255);
+ }
+ 
+ .button--full {
+     background-color: rgb(24, 148, 255);
+     color: #fff;
+     border: 1px solid rgb(24, 148, 255);
+ }
+ 
+ .button--empty {
+     background-color: #fff;
+     color: rgb(24, 148, 255);
+     border: 1px solid rgb(24, 148, 255);
+ }
