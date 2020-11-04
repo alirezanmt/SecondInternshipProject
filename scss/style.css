@@ -1,0 +1,304 @@
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body li {
+  list-style: none;
+}
+
+body a {
+  text-decoration: none;
+  color: #4c4c4c;
+  cursor: pointer;
+}
+
+body img {
+  max-width: 100;
+  height: auto;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body li {
+  list-style: none;
+}
+
+body a {
+  text-decoration: none;
+  color: #4c4c4c;
+  cursor: pointer;
+}
+
+body img {
+  max-width: 100;
+  height: auto;
+}
+
+.generalNavBar {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  width: 100vw;
+  height: 20vh;
+}
+
+.generalNavBar__burger {
+  cursor: pointer;
+  display: none;
+  margin-left: 3rem;
+}
+
+.generalNavBar__burger div {
+  background-color: #1894ff;
+  width: 18px;
+  height: 3px;
+  margin: 2px;
+}
+
+.generalNavBar .button {
+  width: 170px;
+  height: 52px;
+  border-radius: 10px;
+  text-align: center;
+  font-size: 1.4rem;
+  font-weight: bold;
+  padding-top: 6px;
+  background-color: #e6f3ff;
+  color: #1894ff;
+  border: 1px solid #e6f3ff;
+}
+
+.generalNavBar__ul__li {
+  margin: auto 15px;
+}
+
+.generalNavBar__ul__li__a {
+  font-size: 1.3rem;
+}
+
+.generalNavBar__logo {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  height: 100%;
+  width: 10rem;
+  text-align: right;
+}
+
+.generalNavBar__logo img {
+  width: 30%;
+}
+
+.generalNavBar__logo p {
+  width: 70%;
+  font-size: 0.7rem;
+}
+
+.generalNavBar__logo strong {
+  font-size: 1rem;
+}
+
+.rotate .generalNavBar__burger__line1 {
+  -webkit-transform: rotate(45deg) translate(1px, 5px);
+          transform: rotate(45deg) translate(1px, 5px);
+}
+
+.rotate .generalNavBar__burger__line2 {
+  opacity: 0;
+}
+
+.rotate .generalNavBar__burger__line3 {
+  -webkit-transform: rotate(-45deg) translate(2px, -6px);
+          transform: rotate(-45deg) translate(2px, -6px);
+}
+
+.generalNavBarMobile {
+  display: none;
+  position: fixed;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+  width: 100%;
+  height: 80vh;
+  background-color: white;
+  padding: 1em 3em;
+}
+
+.generalNavBarMobile--active {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.generalNavBarMobile__ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  height: 70%;
+  width: 100%;
+  border-bottom: 1px solid #888;
+}
+
+.generalNavBarMobile__ul__li {
+  padding-right: 2rem;
+  height: 13%;
+  width: 100%;
+  text-align: right;
+  border-radius: 10px;
+}
+
+.generalNavBarMobile__ul__li__a {
+  color: #888;
+  font-size: 1rem;
+}
+
+.generalNavBarMobile__ul__li__a--current {
+  padding-right: 1rem;
+  border-right: 3px solid #1894ff;
+  color: #1894ff;
+}
+
+.fix-body {
+  overflow: hidden;
+}
+
+@-webkit-keyframes nav-animation {
+  0% {
+    background-color: #fff;
+  }
+  50% {
+    background-color: rgba(24, 148, 255, 0.1);
+  }
+  100% {
+    background-color: white;
+  }
+}
+
+@keyframes nav-animation {
+  0% {
+    background-color: #fff;
+  }
+  50% {
+    background-color: rgba(24, 148, 255, 0.1);
+  }
+  100% {
+    background-color: white;
+  }
+}
+
+@media screen and (max-width: 970px) and (min-width: 769px) {
+  .button {
+    width: 130px;
+    height: 42px;
+    border-radius: 10px;
+    text-align: center;
+    font-size: 1rem;
+    font-weight: bold;
+    padding-top: 6px;
+  }
+  .generalNavBar__ul__li {
+    margin: auto 5px;
+  }
+  .generalNavBar__ul__li__a {
+    font-size: 1rem;
+  }
+  .generalNavBar p {
+    font-size: 0.7rem;
+  }
+  .generalNavBar strong {
+    font-size: 1rem;
+  }
+  .generalNavBarMobile {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 768px) and (min-width: 481px) {
+  .generalNavBar {
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+  .generalNavBar__burger {
+    display: block;
+  }
+  .generalNavBar__ul {
+    display: none;
+  }
+  .generalNavBar__logo p {
+    font-size: 0.6rem;
+  }
+  .generalNavBar__logo strong {
+    font-size: 0.9rem;
+  }
+  .button {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .generalNavBar {
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+  .generalNavBar__logo p {
+    font-size: 0.6rem;
+  }
+  .generalNavBar__logo strong {
+    font-size: 0.9rem;
+  }
+  .generalNavBar__burger {
+    display: block;
+  }
+  .generalNavBar__ul {
+    display: none;
+  }
+  .button {
+    display: none;
+  }
+}
+/*# sourceMappingURL=style.css.map */

@@ -173,6 +173,13 @@ const mobileMenu = () => {
     const navLi = document.querySelectorAll('.generalNavBarMobile li');
     console.log(navLi);
 
+    var sty = getComputedStyle(burger);
+    var dis = sty.display;
+
+    if (dis === "none") {
+        nav_container_mob.style.display = "none";
+    }
+
     burger.addEventListener('click', () => {
         console.log("burger clicked")
         nav_container_mob.classList.toggle('generalNavBarMobile--active');
