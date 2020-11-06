@@ -1,0 +1,187 @@
+@import "./utilityClasses";
+.footer {
+    @include flex(row, flex-start, space-between);
+    width: 100%;
+    padding: 2rem 7rem 5rem 7rem;
+    &__links {
+        @include flex(column, flex-end, space-around);
+        text-align: right;
+        height: 100%;
+        width: 25%;
+        // background-color: olivedrab;
+        h4 {
+            margin-bottom: 1.5rem;
+            font-size: 1rem;
+            font-weight: bold;
+        }
+        div {
+            @include flex(row, center, space-between);
+            img {
+                max-width: 45%;
+            }
+        }
+    }
+    &__menu-1 {
+        @include flex(column, flex-end, space-around);
+        height: 100%;
+        text-align: right;
+        h4 {
+            margin-bottom: 1rem;
+            font-size: 1rem;
+            font-weight: bold;
+        }
+        &__menu {
+            li {
+                margin-bottom: 1.3rem;
+                a {
+                    font-size: 0.8rem;
+                }
+            }
+        }
+    }
+    &__menu-2 {
+        @include flex(column, flex-end, space-around);
+        height: 100%;
+        text-align: right;
+        h4 {
+            margin-bottom: 1rem;
+            font-size: 1rem;
+            font-weight: bold;
+        }
+        &__menu {
+            li {
+                margin-bottom: 1.3rem;
+                a {
+                    font-size: 0.8rem;
+                }
+            }
+            &__current {
+                border-right: 3px solid $topic-side-color;
+                a {
+                    color: $topic-color !important;
+                    margin-right: 1rem;
+                }
+            }
+        }
+    }
+    &__info {
+        @include flex(column, flex-end, space-between);
+        text-align: right;
+        height: 100%;
+        width: 25%;
+        &__logo {
+            @include flex(row, center, space-between);
+            height: 5rem;
+            width: 12rem;
+            text-align: right;
+            // background-color: lime;
+            img {
+                width: 25%;
+                // background-color: mediumpurple;
+            }
+            p {
+                width: 70%;
+                height: 100%;
+                font-size: 0.7rem;
+                padding-right: 0.5rem;
+                padding-top: 1rem;
+                // background-color: maroon;
+                margin: 0 !important;
+                strong {
+                    font-size: 1rem;
+                    color: #111;
+                }
+            }
+        }
+        h4 {
+            margin-bottom: 1rem;
+            margin-top: 1.5rem;
+            font-size: 1rem;
+            font-weight: bold;
+            line-height: 2rem;
+        }
+        p {
+            direction: rtl;
+            color: $text-color;
+            margin-bottom: 2.5rem;
+            font-size: 0.8rem;
+        }
+        &__contact-us {
+            @include flex(row, center, space-between);
+            img {
+                margin-left: 1.5rem;
+            }
+        }
+    }
+}
+
+// media queries
+@media screen and (max-width: 970px) and (min-width:769px) {
+    .footer {
+        padding: 2rem 3rem 5rem 3rem;
+        &__links {
+            div {
+                @include flex(column, center, space-between);
+                img {
+                    max-width: 85%;
+                    margin-bottom: 1.5rem;
+                }
+            }
+        }
+    }
+}
+
+// Tablets and iPads
+@media screen and (max-width: 768px) and (min-width:481px) {
+    .footer {
+        @include flex(row, center, space-around);
+        width: 100%;
+        padding: 2rem 3rem 3rem 3rem;
+        &__links {
+            display: none;
+        }
+        &__menu-1 {
+            display: none;
+        }
+        &__menu-2 {
+            display: none;
+        }
+        &__info {
+            @include flex(column, flex-end, space-between);
+            width: 100%;
+            &__contact-us {
+                @include flex(row, center, center);
+                width: 100%;
+            }
+        }
+    }
+}
+
+// Mobiles
+@media screen and (max-width: 480px) {
+    .footer {
+        @include flex(row, flex-start, space-between);
+        width: 100%;
+        padding: 2rem 3rem 3rem 3rem;
+        &__links {
+            display: none;
+        }
+        &__menu-1 {
+            display: none;
+        }
+        &__menu-2 {
+            display: none;
+        }
+        &__info {
+            @include flex(column, flex-end, space-between);
+            width: 100%;
+            &__contact-us {
+                @include flex(row, center, center);
+                width: 100%;
+            }
+            p {
+                font-size: 0.8rem;
+            }
+        }
+    }
+}
