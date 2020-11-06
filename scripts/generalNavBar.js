@@ -22,7 +22,7 @@ const generalNavBarMobile = () => {
 
     // NavigationBar for Desktop and Laptops
     var a = document.createElement("a");
-    a.setAttribute("class", "buttonLarge button--light button");
+    a.setAttribute("class", "button");
     var txt = document.createTextNode("دانلود درمانیتو");
     a.appendChild(txt);
     nav1.appendChild(a);
@@ -154,7 +154,7 @@ const generalNavBarMobile = () => {
     nav1.appendChild(ul);
 
     a = document.createElement("a");
-    a.setAttribute("class", "button--light buttonLarge");
+    a.setAttribute("class", "generalNavBarMobile__a");
     var txt = document.createTextNode("دانلود درمانیتو");
     a.appendChild(txt);
 

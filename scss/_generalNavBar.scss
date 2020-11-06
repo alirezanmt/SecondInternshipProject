@@ -59,6 +59,7 @@
 .generalNavBarMobile {
     display: none;
     position: fixed;
+    z-index: 2;
     flex-direction: column;
     justify-content: space-around;
     align-items: flex-end;
@@ -66,14 +67,11 @@
     height: 80vh;
     background-color: white;
     padding: 1em 3em;
-    &--active {
-        display: flex;
-    }
     &__ul {
         @include flex(column, flex-end, center);
         height: 70%;
         width: 100%;
-        border-bottom: 1px solid #888;
+        border-bottom: 1px solid rgb(109, 96, 96);
         &__li {
             padding-right: 2rem;
             height: 13%;
@@ -91,6 +89,14 @@
             }
         }
     }
+    &__a {
+        @include buttonLarge();
+        @include button--light();
+    }
+}
+
+.generalNavBarMobile--active {
+    display: flex;
 }
 
 .fix-body {

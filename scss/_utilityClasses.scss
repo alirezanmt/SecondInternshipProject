@@ -1,11 +1,48 @@
+// font
+@font-face {
+    font-family: 'vazir';
+    /*define a font*/
+    src: url('../fonts/vazir-font-v16.1.0/Vazir.eot');
+    /*ie 9 and ...*/
+    src: local('vazir'), /*check if font is installed in user system*/
+    local('vazir'), /*browsers like safari*/
+    url('../fonts/vazir-font-v16.1.0/Vazir.eot?#iefix') format('embedded-opentype'), /*hack for ie 8 and before*/
+    url('../fonts/vazir-font-v16.1.0/Vazir.woff') format('woff'), /*new browsers*/
+    url('../fonts/vazir-font-v16.1.0/Vazir.ttf') format('truetype'), /*all browsers except ie*/
+    url('../fonts/vazir-font-v16.1.0/Vazir.svg#Vazir') format('svg');
+    /*old version iOS*/
+    font-style: normal;
+    font-weight: normal;
+}
+
+// different sizes:
+//@media screen and (max-width: 970px) and (min-width:769px)
+// Tablets and iPads
+//@media screen and (max-width: 768px) and (min-width:481px)
+// Mobiles
+//@media screen and (max-width: 480px)
 // variables
-$primary-color: rgb(24, 148, 255);
-$secondary-color:rgb(230, 243, 255);
+$primary-color: rgb(24,
+148,
+255);
+$secondary-color:rgb(230,
+243,
+255);
+$text-color:rgb(110,
+110,
+110);
+$topic-color:rgb(42,
+102,
+183);
+$topic-side-color:rgb(0,
+222,
+154);
 // tags
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: vazir;
 }
 
 body {
@@ -16,6 +53,10 @@ body {
         text-decoration: none;
         color: rgb(76, 76, 76);
         cursor: pointer;
+        &:hover {
+            color: $primary-color;
+            text-decoration: none;
+        }
     }
     img {
         max-width: 100;
@@ -24,7 +65,9 @@ body {
 }
 
 // functions
-@mixin flex($dir, $align, $justify) {
+@mixin flex($dir,
+$align,
+$justify) {
     display: flex;
     flex-direction: $dir;
     align-items: $align;
@@ -36,9 +79,9 @@ body {
     height: 52px;
     border-radius: 10px;
     text-align: center;
-    font-size: 1.4rem;
+    font-size: 1rem;
     font-weight: bold;
-    padding-top: 6px;
+    padding-top: 12px;
 }
 
 @mixin button--light {
