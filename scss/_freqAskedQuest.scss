@@ -274,7 +274,8 @@
         text-align: right;
         border-bottom: 1px solid #eee;
         padding: 1rem 0;
-        transition: height 5s;
+        height: 6rem;
+        transition: height 1s;
         &__top {
             @include flex(row, center, end);
             width: 100%;

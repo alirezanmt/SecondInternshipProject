@@ -1,0 +1,430 @@
+@import "./utilityClasses";
+//section one
+.aboutUs__section-1 {
+    @include flex(row, center, space-between);
+    margin-top: 3rem;
+    padding: 0 5rem;
+    &__pharmacies {
+        position: relative;
+        width: 50%;
+        height: 200px;
+        //background-color: rgb(201, 194, 189);
+        &__pharmacy {
+            position: absolute;
+            width: 20rem;
+            height: 6rem;
+            border-radius: 25px;
+            // background-color: darkcyan;
+            box-shadow: 0 0 20px 1px rgba(24, 148, 255, 0.3);
+            &__circle {
+                position: absolute;
+                top: 10px;
+                right: 5px;
+            }
+            &__human {
+                position: absolute;
+                top: 40px;
+                right: 30px;
+            }
+            &__topic {
+                position: absolute;
+                top: 20px;
+                right: 90px;
+                font-weight: bold;
+            }
+            &__loc {
+                position: absolute;
+                top: 60px;
+                right: 85px;
+            }
+            &__text {
+                position: absolute;
+                top: 60px;
+                right: 100px;
+                font-size: 0.6rem;
+            }
+            &__mood {
+                position: absolute;
+                top: 10px;
+                left: 10px;
+                font-size: 0.6rem;
+                background-color: $primary-color;
+                padding: 0.2rem 0.5rem;
+                border-radius: 10px;
+                color: #fff;
+            }
+            &--one {
+                top: -50px;
+                right: 20px;
+            }
+            &--two {
+                transform: scale(0.7);
+                top: 70px;
+                right: 25px;
+                opacity: 0.5;
+            }
+            &--three {
+                transform: scale(0.7);
+                top: 170px;
+                right: 130px;
+                opacity: 0.5;
+            }
+        }
+    }
+    &__info {
+        @include flex(column, flex-end, space-between);
+        width: 50%;
+        text-align: right;
+        h3 {
+            width: 80%;
+            direction: rtl;
+            color: $primary-color;
+            margin-bottom: 1rem;
+            font-weight: bold;
+            font-size: 1.5rem;
+            line-height: 3rem;
+        }
+        p {
+            width: 85%;
+            direction: rtl;
+            color: $text-color;
+            text-align: justify;
+            text-justify: inter-word;
+            margin-bottom: 0;
+            line-height: 1.5rem;
+            font-size: 0.8rem;
+        }
+        &__in {
+            @include flex(row, center, space-between);
+            direction: rtl;
+            margin-bottom: 2rem;
+            margin-top: 2rem;
+            padding: 0.4rem 0.8rem;
+            background-color: #eee;
+            border-radius: 10px;
+            width: 95%;
+            input {
+                border: none;
+                width: 70%;
+                font-size: 0.8rem;
+                background-color: #eee;
+            }
+            button {
+                border-radius: 10px;
+                font-size: 0.8rem;
+            }
+        }
+    }
+}
+
+// media queries:
+@media screen and (max-width: 970px) and (min-width:769px) {
+    .aboutUs__section-1 {
+        padding: 0 3rem;
+        &__pharmacies {
+            width: 50%;
+            &__pharmacy {
+                &--one {
+                    transform: scale(0.9);
+                }
+                &--two {
+                    transform: scale(0.6);
+                }
+                &--three {
+                    transform: scale(0.6);
+                    right: 120px;
+                }
+            }
+        }
+        &__info {
+            width: 50%;
+            h3 {
+                width: 80%;
+                font-size: 1.5rem;
+            }
+            p {
+                width: 80%;
+                font-size: 0.8rem;
+            }
+            &__in {
+                padding: 0.4rem 0.8rem;
+                width: 95%;
+                input {
+                    width: 70%;
+                    font-size: 0.6rem;
+                }
+                button {
+                    font-size: 0.6rem;
+                }
+            }
+        }
+    }
+}
+
+// Tablets and iPads
+@media screen and (max-width: 768px) and (min-width:481px) {
+    .aboutUs__section-1 {
+        @include flex(column, center, space-between);
+        padding: 0 3rem;
+        margin-top: 6rem;
+        &__pharmacies {
+            width: 100%;
+            height: 100px;
+            &__pharmacy {
+                &--two {
+                    display: none;
+                }
+                &--three {
+                    display: none;
+                }
+            }
+        }
+        &__info {
+            width: 100%;
+            h3 {
+                width: 90%;
+                font-size: 1.2rem;
+                line-height: 3rem;
+            }
+            p {
+                width: 95%;
+                font-size: 0.8rem;
+            }
+            &__in {
+                input {}
+                button {}
+            }
+        }
+    }
+}
+
+// Mobiles
+@media screen and (max-width: 480px) {
+    .aboutUs__section-1 {
+        @include flex(column, center, space-between);
+        padding: 0 3rem;
+        margin-top: 6rem;
+        &__pharmacies {
+            width: 100%;
+            height: 100px;
+            //background-color: darkgoldenrod;
+            &__pharmacy {
+                &--one {
+                    transform: scale(0.7);
+                    left: -30px;
+                }
+                &--two {
+                    display: none;
+                }
+                &--three {
+                    display: none;
+                }
+            }
+        }
+        &__info {
+            width: 100%;
+            h3 {
+                width: 90%;
+                font-size: 1rem;
+                line-height: 2rem;
+            }
+            p {
+                width: 95%;
+                font-size: 0.8rem;
+            }
+            &__in {
+                width: 100%;
+                input {
+                    font-size: 0.5rem;
+                    width: 65%;
+                }
+                button {
+                    font-size: 0.5rem;
+                    padding: 0.1rem 0.5rem;
+                }
+            }
+        }
+    }
+}
+
+//section two
+.aboutUs__section-2 {
+    @include flex(row, center, space-around);
+    margin-top: 6rem;
+    width: 100%;
+    background-color: $primary-color;
+    &__content {
+        @include flex(column, center, space-around);
+        padding: 2rem 0;
+        p {
+            color: #fff;
+            font-size: 0.8rem;
+        }
+        span {
+            color: #fff;
+            font-size: 1.5rem;
+        }
+    }
+}
+
+// media queries:
+//@media screen and (max-width: 970px) and (min-width:769px)
+// Tablets and iPads
+@media screen and (max-width: 768px) and (min-width:481px) {
+    .aboutUs__section-2 {
+        @include flex(column-reverse, center, space-around);
+    }
+}
+
+// Mobiles
+@media screen and (max-width: 480px) {
+    .aboutUs__section-2 {
+        @include flex(column-reverse, center, space-around);
+    }
+}
+
+//section three
+.aboutUs__section-3 {
+    @include flex(column, flex-end, space-around);
+    width: 100%;
+    margin-top: 3rem;
+    padding: 0 3rem;
+    &__topic {
+        width: 100%;
+        text-align: right;
+        h5 {
+            color: $topic-color;
+            border-right: 3px solid $topic-side-color;
+            padding-right: 1rem;
+            font-weight: bold;
+        }
+        p {
+            margin-top: 2rem;
+            font-size: 0.8rem;
+        }
+    }
+    &__cards {
+        @include flex(row, center, space-around);
+        width: 100%;
+        margin-top: 2rem;
+        padding: 0 3rem;
+        &__card {
+            width: 30%;
+            @include flex(column, center, space-between);
+            background-color: #fff;
+            padding: 2.5rem 1.3rem;
+            border-radius: 40px;
+            box-shadow: 0 0 20px 1px rgba(24, 148, 255, 0.3);
+            img {}
+            h5 {
+                width: 100%;
+                margin-top: 2.5rem;
+                text-align: right;
+                color: $topic-color;
+                font-weight: bold;
+                font-size: 1.2rem;
+            }
+            p {
+                direction: rtl;
+                width: 100%;
+                margin-top: 1rem;
+                text-align: justify;
+                text-justify: inter-word;
+                font-size: 0.8rem;
+                line-height: 1.5rem;
+            }
+            a {
+                @include buttonLarge();
+                @include button--full();
+                margin-top: 2rem;
+            }
+        }
+    }
+}
+
+// media queries:
+@media screen and (max-width: 970px) and (min-width:769px) {
+    .aboutUs__section-3 {
+        @include flex(column, flex-end, space-around);
+        &__cards {
+            padding: 0 2rem;
+            &__card {
+                width: 40%;
+                h5 {
+                    font-size: 1rem;
+                }
+                p {
+                    font-size: 0.6rem;
+                    line-height: 1.5rem;
+                }
+                a {
+                    font-size: 1rem;
+                }
+            }
+        }
+    }
+}
+
+// Tablets and iPads
+@media screen and (max-width: 768px) and (min-width:481px) {
+    .aboutUs__section-3 {
+        &__topic {
+            h5 {
+                font-size: 1rem;
+            }
+            p {
+                font-size: 0.6rem;
+            }
+        }
+        &__cards {
+            @include flex(column, center, space-between);
+            &__card {
+                width: 100%;
+                margin-bottom: 1rem;
+                h5 {
+                    font-size: 1rem;
+                }
+                p {
+                    font-size: 0.6rem;
+                }
+                a {
+                    font-size: 1rem;
+                }
+            }
+        }
+    }
+}
+
+// Mobiles
+@media screen and (max-width: 480px) {
+    .aboutUs__section-3 {
+        &__topic {
+            h5 {
+                font-size: 1rem;
+            }
+            p {
+                font-size: 0.6rem;
+            }
+        }
+        &__cards {
+            @include flex(column, center, space-between);
+            padding: 0 0;
+            &__card {
+                width: 100%;
+                margin-bottom: 1rem;
+                img {
+                    max-width: 60%;
+                }
+                h5 {
+                    font-size: 1rem;
+                }
+                p {
+                    font-size: 0.6rem;
+                }
+                a {
+                    font-size: 1rem;
+                }
+            }
+        }
+    }
+}
